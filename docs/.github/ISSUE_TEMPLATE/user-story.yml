@@ -1,0 +1,56 @@
+name: Пользовательская история
+description: Требование в формате User Story
+title: "US: "
+labels: ["user-story"]
+body:
+  - type: input
+    id: req_id
+    attributes:
+      label: ID требования
+      placeholder: REQ-001
+    validations:
+      required: true
+  - type: textarea
+    id: story
+    attributes:
+      label: История
+      description: Формат «Как <роль>, я хочу <действие>, чтобы <ценность>»
+      placeholder: Как студент, я хочу ..., чтобы ...
+    validations:
+      required: true
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Критерии приёмки
+      description: Формат Дано / Когда / Тогда
+      placeholder: |
+        - Дано ..., когда ..., тогда ...
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Приоритет (MoSCoW)
+      options:
+        - Must
+        - Should
+        - Could
+        - Won't
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Источник требования
+      placeholder: Интервью, вопрос 3
+  - type: checkboxes
+    id: invest
+    attributes:
+      label: Предварительная проверка INVEST
+      options:
+        - label: Independent — независима
+        - label: Negotiable — обсуждаема
+        - label: Valuable — ценна
+        - label: Estimable — оцениваема
+        - label: Small — небольшая
+        - label: Testable — проверяема
